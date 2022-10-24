@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+:root{
+    --primary-color: blue;
+    --secondary-color: rgb(48, 55, 97);
+    --dark-color:rgb(10, 27, 115);
+    --error-color: #d9534f;
+    --success-color:#5cb85c;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    color: rgb(0, 0, 0);
+    line-height: 1.6em;
+}
+ul{
+    list-style-type: none;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+
+
+h1, h2{
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+p{
+    margin: 10px 0px;
+}
+img{
+    width: 100px;
+}
+
+
+code, pre{
+    background-color: rgb(44, 38, 38);
+    color: white;
+    padding: 10px;
+}
+
+.hidden{
+    visibility: hidden;
+    height: 0;
+}
+
+/*navbar*/
+
+.navbar{
+    background-color: rgb(35, 49, 116);
+    color: rgb(254, 248, 248);
+    height: 70px;
+}
+.navbar ul{
+    display: flex;
+}
+.navbar a{
+    padding: 10px;
+    margin: 0 5px;
+}
+.navbar a:hover{
+    border-bottom: 2px solid white;
+}
+/* Show case*/
+.showcase{
+    height: 400px;
+    background-color:var(--primary-color);
+    color: rgb(247, 245, 245);
+    position: relative;
+}
+
+.showcase-text{
+   animation: slideInFromLeft 1s ease-in;
+
+}
+.showcase h1{
+    font-size: 40px;
+}
+.showcase p{
+    margin: 20px 0;
+}
+.showcase-form{
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    animation: slideInFromRight 1s ease-in;
+    
+}
+
+.showcase-form .form-control{
+    margin:  30px 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email']{
+    border: 0;
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.showcase-form input:focus{
+    outline: none;
+}
+
+.showcase::before,
+.showcase::after{
+
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: rgb(255, 255, 255);
+    transform: skewY(-3deg);
+    
+}
+    
+/*Stats*/
+.stats{ 
+    padding-top: 200px;
+    overflow: visible;
+    animation: slideInFromBottom 1s ease-in;
+}
+.stats .grid h3{
+    margin-top: 15px;
+    font-size: 30px;
+}
+.stats .grid p{
+    font-size: 25px;
+}
+
+.cli .grid{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);;
+}
+
+.cli .grid >*:first-child{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2 ;
+}
+.cloud .grid{
+    grid-template-columns: 4fr 3fr;
+}
+img{
+    width: 100%;
+}
+
+/*languages*/
+.languages .flex{
+    flex-wrap: wrap;
+}
+
+.languages .card h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.languages .card:hover{
+    transform: translateY(-15px);
+}
+
+
+.languages .card{
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.2s ease-in;
+}
+
+/*Features*/
+.features-head img, .docs-head img{
+    width: 200px;
+    justify-self: flex-end;
+}
+
+.features-sub-head img{
+    width: 300px;
+    justify-self: flex-end;
+}
+
+.features-main .card >i{
+    margin-right: 20px;
+
+}
+
+.features-main .grid{
+    padding: 30px;
+    
+}
+
+.features-main .grid > *:first-child{
+    grid-column: 1 / span 3;
+}
+
+.features-main .grid > *:nth-child(2){
+    grid-column: 1 / span 3;
+}
+
+.features-main .grid > *:nth-child(3){
+    grid-column: 1 / span 3;
+}
+
+.features-main .grid > *:nth-child(4){
+    grid-column: 1 / span 3;
+}
+
+.features-main .grid > *:nth-child(5){
+    grid-column: 1 / span 3;
+}
+
+.features-main .grid > *:nth-child(6){
+    grid-column: 1 / span 3;
+}
+
+/*feature design*/
+
+
+.features-main .card p{
+    font-size: 20px;
+    color: white;
+    align-items: center;
+}
+
+.features-main .card:hover{
+    transform: translateX(30px);
+}
+
+
+.features-main .card{
+    text-align: center;
+    margin: 0px 10px 0px;
+    transition: transform 0.1s ease-in;
+    background-color: black;
+    color: white;
+}
+
+.docs-main .card{
+    padding-left: 20px;
+    color: white;
+}
+
+.docs-main .card nav li a{
+    color: white;
+}
+
+.docs-main .card nav :hover{
+    font-weight: bold;
+    color: blue;
+    transform: translateX(10px);
+}
+
+.docs-main a{
+    text-decoration: none;
+    color: solid black;
+    
+}
+
+.docs-main .grid{
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+
+.docs-main nav li{
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px rgb(0, 0, 0) solid;
+    margin-right: 20px;
+}
+
+
+/*Footer*/
+.footer .social a{
+    margin: 0 10px;
+}
+
+.footer nav ul a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-fea{
+    margin-top: 40%;
+}
+
+.footer-fea nav ul a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-fea .social a{
+    margin: 0 10px;
+}
+
+/*Animations*/
+
+@keyframes slideInFromLeft {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+
+@keyframes slideInFromRight {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+
+
+@keyframes slideInFromTop {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+
+@keyframes slideInFromBottom {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+
+/*Tablets and others*/
+
+@media (max-width: 768px){
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid,
+    .features-main .grid,
+    .docs-main .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .showcase{
+        height: auto;
+    }
+
+    .showcase-text{
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .showcase-form{
+        justify-self: center;
+        margin: auto;
+        overflow: visible;
+    }
+
+    .cli .grid > *:first-child{
+        grid-column: 1 ;
+        grid-row: 1  ;
+    }
+
+    .features-head,
+    .features-sub-head,
+    .docs-head{
+        text-align: center;
+    }
+
+    .features-head img,
+    .features-sub-head img,
+    .docs-head img{
+       justify-self: center;
+    }
+
+
+}
+
+/*mobile*/
+@media(max-width:500px) {
+
+    .navbar{
+        height: 110px;
+    }
+
+    .navbar .flex{
+        flex-direction: column;
+    }
+    
+    .navbar ul{
+        padding: 10px;
+        background-color: rgb(0, 0, 0,0.1);
+    }
+}
+
+.card p{
+ color: black;
+}
+
+vaishnavi-1710
